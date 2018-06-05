@@ -1,0 +1,15 @@
+package com.ubs.eqdel.rulesrepository.explosion
+import java.util.Date;
+import java.util.Calendar;
+import java.lang.System;
+
+function String getDate(){
+    Calendar cal = Calendar.getInstance();
+    return cal.getTime().toString();
+}
+
+rule "explosion"
+	salience 10000
+    when
+    then
+end

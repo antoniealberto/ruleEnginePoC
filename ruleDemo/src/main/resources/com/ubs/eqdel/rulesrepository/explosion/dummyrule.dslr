@@ -1,0 +1,18 @@
+package com.ubs.eqdel.rulesrepository.explosion
+expander rulebook.dsl
+
+import com.ubs.eqdel.rules.model.Fact;
+import com.ubs.eqdel.rules.model.explosion.EqiProduct;
+
+global com.ubs.eqdel.rules.model.Result result;
+
+dialect  "mvel"
+
+rule "mercury explosion"
+	priority -0010
+    when
+        Load product
+        Product is "EQI"
+    then
+        Add new deal " *** with mercury exploded new trade *** "
+end

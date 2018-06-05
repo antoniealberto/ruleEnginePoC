@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>edu.ruleEngie.demo</groupId>
+    <artifactId>DemoPom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>ruleEngine</module>
+        <module>ruleDemo</module>
+        <module>DemoAPI</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>devops-nexus</id>
+            <name>devops-nexus</name>
+            <url>http://cft-nexus.ldn.swissbank.com:8081/nexus/content/repositories/int-ged-releases</url>
+        </repository>
+        <repository>
+            <id>cft-releases</id>
+            <url>http://cft-nexus.ldn.swissbank.com:8081/nexus/content/repositories/int-ged-releases</url>
+        </repository>
+        <repository>
+            <id>cft-snapshots</id>
+            <url>http://cft-nexus.ldn.swissbank.com:8081/nexus/content/repositories/int-ged-snapshots</url>
+        </repository>
+        <repository>
+            <id>cft-thirdparty</id>
+            <name>devops-thirdparty</name>
+            <url>http://cft-nexus.ldn.swissbank.com:8081/nexus/content/repositories/int-ged-third-party</url>
+        </repository>
+        <repository>
+            <id>cft-public</id>
+            <name>CFT Nexus</name>
+            <url>http://cft-nexus.ldn.swissbank.com:8081/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>Central Repository</name>
+            <url>http://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>cft-releases</id>
+            <url>http://cft-nexus.ldn.swissbank.com:8081/nexus/content/repositories/int-ged-releases</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>cft-snapshots</id>
+            <url>http://cft-nexus.ldn.swissbank.com:8081/nexus/content/repositories/int-ged-snapshots</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>cft-public</id>
+            <name>CFT Nexus</name>
+            <url>http://cft-nexus.ldn.swissbank.com:8081/nexus/content/groups/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <junit.version>4.11</junit.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+    </dependencies>
+
+</project>
